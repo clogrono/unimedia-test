@@ -1,0 +1,103 @@
+$button-background: #53D01C;
+$title-background: #3F902D ;
+$font-color-white: #FFFFFF;
+$border-color: black;
+$grey-white: #DFDFDF;
+//BUTTON
+.button-container{
+    display: flex;
+    justify-content: center;
+    padding: 1vh 0.5vw;
+    font-size: 2.2vh;
+    font-weight: bold;
+    background: $button-background;
+    cursor: pointer;
+    &>*{
+        cursor: pointer;
+    }
+}
+.border-round{
+    border-radius: 15px;
+    font-size: 1.8vh;
+}
+//INPUT
+.input-content{
+    width: 100%;
+    padding: 1.4vh 0.8vw 0;
+    font-size: 2.8vh;
+    border: 3px solid $border-color;
+    font-style: oblique;
+    outline: none;
+    &::placeholder{
+        color: $grey-white;
+    }
+}
+//SEARCHER
+.sercher-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 30vh;
+    width: 15vw;
+    border: 5px solid $border-color;
+    border-radius: 15px;
+    padding: 0 1vw 8vh;
+    .searcher-title{
+        text-align: center;
+        font-size: 2.6vh;
+        margin-bottom: 0.5vh !important;
+    }
+    .searcher-input{
+        display: flex;
+        margin-bottom: 2vh;
+    }
+}
+//LIST
+.list-header{
+    background: $title-background;
+    color: $font-color-white;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1.6vh 0;
+    .title-header{
+        text-align: center;
+    }
+}
+.list-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .list-body-button{
+        margin: 1vh 0;
+    }
+}
+//MODAL
+.modal-container {
+    width: 30vw;
+    padding: 2.7vh 3vw 3.7vh 3vw;
+    position: relative;
+    .icon-close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 3.5vh;
+      width: 3.5vh;
+      img {
+        width: 100%;
+      }
+    }
+    .modal-title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 2.2vh;
+        padding-bottom: 2.2vh;
+    }
+    & > p > label{
+        font-weight: bold;
+    }
+}
